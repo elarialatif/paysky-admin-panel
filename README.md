@@ -42,6 +42,19 @@ This project is a responsive admin panel for managing products and users. It inc
 ### API Endpoints
 
 [https://fakestoreapi.com/docs]
+- Products 
+  1. Get All Products -- Get  https://fakestoreapi.com/products
+  2. Get All Categories -- Get   https://fakestoreapi.com/products/categories
+  3. Add New Product -- Post   https://fakestoreapi.com/products
+  4. Update Product -- Put   https://fakestoreapi.com/products/id
+  4. Delete Product -- delete   https://fakestoreapi.com/products/id
+- Users 
+  1. Get All Users -- Get  https://fakestoreapi.com/users
+  2. Add New User -- Post   https://fakestoreapi.com/users
+  3. Update User -- Put   https://fakestoreapi.com/users/id
+  4. Delete User -- delete   https://fakestoreapi.com/users/id
+- User login 
+  1. Get All Users -- Post  https://fakestoreapi.com/auth/login
 
 
 ## Final Notes
