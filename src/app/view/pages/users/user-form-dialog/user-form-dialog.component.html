@@ -7,21 +7,33 @@
     </mat-form-field>
     <mat-form-field>
       <mat-label>Email</mat-label>
-      <textarea matInput formControlName="email"></textarea>
+      <input type="email" matInput formControlName="email">
     </mat-form-field>
     <mat-form-field>
       <mat-label>Password</mat-label>
-      <input matInput type="number" formControlName="password">
+      <input matInput formControlName="password">
     </mat-form-field>
     <mat-form-field>
-      <mat-label>Address</mat-label>
-      <input matInput formControlName="address">
+      <mat-label>City</mat-label>
+      <input matInput formControlName="city">
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Street</mat-label>
+      <input matInput formControlName="street">
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Building Numbert</mat-label>
+      <input matInput type="number"  formControlName="number">
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Zipcode</mat-label>
+      <input matInput formControlName="zipcode">
     </mat-form-field>
     <mat-form-field>
       <mat-label>Phone</mat-label>
       <input matInput formControlName="phone">
     </mat-form-field>
-    <button type="submit" mat-button>{{data.user ? 'Update' : 'Add'}}</button>
+    <button type="submit" mat-button [ngClass]="{'updateBtn': data.user, 'addBtn': !data.user}">{{data.user ? 'Update' : 'Add'}}</button>
   </form>
 </mat-dialog-content>
 

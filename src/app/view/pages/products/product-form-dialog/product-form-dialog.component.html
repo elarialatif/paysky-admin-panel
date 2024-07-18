@@ -14,10 +14,16 @@
       <input matInput type="number" formControlName="price">
     </mat-form-field>
     <mat-form-field>
+      <mat-label>Category</mat-label>
+      <mat-select formControlName="category">
+        <mat-option *ngFor="let category of categories" [value]="category">{{ category }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field>
       <mat-label>Image URL</mat-label>
       <input matInput formControlName="image">
     </mat-form-field>
-    <button type="submit" mat-button>{{data.product ? 'Update' : 'Add'}}</button>
+    <button type="submit" mat-button [ngClass]="{'updateBtn': data.product, 'addBtn': !data.product}">{{data.product ? 'Update' : 'Add'}}</button>
   </form>
 </mat-dialog-content>
 

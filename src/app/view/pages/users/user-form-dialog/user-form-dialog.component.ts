@@ -19,7 +19,10 @@ export class UserFormDialogComponent {
       password: [data.user ? data.user.password : '', Validators.required],
       name: [data.user ? data.user.name : ''],
       phone: [data.user ? data.user.phone : '', Validators.required],
-      address: [data.user ? data.user.address : '']
+      city: [data.user ? data.user.address.city : ''],
+      street: [data.user ? data.user.address.street : ''],
+      number: [data.user ? data.user.address.number : 0],
+      zipcode: [data.user ? data.user.address.zipcode : ''],
     });
   }
 

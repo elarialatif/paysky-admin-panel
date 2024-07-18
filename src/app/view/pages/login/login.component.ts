@@ -11,6 +11,7 @@ import { Router } from '@angular/router'; // Import the Router class
 export class LoginComponent {
   loginForm: FormGroup;
   errorMessage: string;
+  isAuthenticated = false;
 
   constructor(private fb: FormBuilder, private authService: AuthService, private router: Router) { // Add router as a private property
     this.loginForm = this.fb.group({
@@ -22,10 +23,12 @@ export class LoginComponent {
 
   onSubmit(): void {
     const { username, password } = this.loginForm.value;
-    if (!this.authService.login(username, password)) {
-      this.errorMessage = 'Invalid username or password';
-    } else {
+    this.authService.login(username, password).subscribe(res => {
+      this.isAuthenticated = true;
+      localStorage.setItem('token', res.token);
       this.router.navigate(['/products']);
-    }
+    }, (error) => {
+      this.errorMessage = 'Invalid username or password';
+    });
   }
 }

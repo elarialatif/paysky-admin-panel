@@ -8,6 +8,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
 import { ProductsListComponent } from './products/products-list/products-list.component';
 import { SpinnerComponent } from '../shared/spinner/spinner.component';
 import { ProductFormDialogComponent } from './products/product-form-dialog/product-form-dialog.component';
@@ -33,6 +34,7 @@ import { UsersListComponent } from './users/users-list/users-list.component';
     ReactiveFormsModule,
     MatFormFieldModule,
     MatInputModule,
+    MatSelectModule
   ],
   exports: [
     SpinnerComponent,

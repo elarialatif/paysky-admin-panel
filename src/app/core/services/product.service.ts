@@ -42,6 +42,10 @@ export class ProductsService {
       catchError(this.handleError)
     );
   }
+  getProductCategories():  Observable<any> {
+    return this.http.get<any>(`${this.apiBaseUrl}/products/categories`).pipe(
+      catchError(this.handleError) );
+  }
 
   private handleError(error: HttpErrorResponse) {
     if (error.error instanceof ErrorEvent) {
