@@ -35,6 +35,10 @@ This project is a responsive admin panel for managing products and users. It inc
 4. Open your browser and navigate to http://localhost:4200.
 
 
+5. Login Crdintials 
+ - username: mor_2314
+ - password: 83r5^_
+
 ### API Endpoints
 
 [https://fakestoreapi.com/docs]
