@@ -23,12 +23,15 @@ This project is a responsive admin panel for managing products and users. It inc
    ```bash
    git clone <git@github.com:elarialatif/paysky-admin-panel.git>
    cd paysky-admin-panel
-2. Clone the repository:
+   
+2. Install dependencies:
   ```bash
   npm install
+
 3. Run the development server:
   ```bash
   ng serve
+
 4. Open your browser and navigate to http://localhost:4200.
 
 ### API Endpoints
