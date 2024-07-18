@@ -16,16 +16,20 @@ import { LoginComponent } from './view/pages/login/login.component';
 import { MainLayoutComponent } from './view/main-layout/main-layout.component';
 import { ProductsListComponent } from './view/pages/products/products-list/products-list.component';
 import { ProductFormComponent } from './view/pages/products/product-form/product-form.component';
+import { SpinnerComponent } from './view/shared/spinner/spinner.component';
+import { PagesModule } from './view/pages/pages.module';
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     MainLayoutComponent,
     ProductsListComponent,
-    ProductFormComponent
+    ProductFormComponent,
+    SpinnerComponent
   ],
   imports: [
     BrowserModule,
+    PagesModule,
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,

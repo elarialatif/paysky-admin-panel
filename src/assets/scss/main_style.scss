@@ -1,0 +1,26 @@
+.inner_content{
+  .item_card {
+    position: relative;
+    margin-bottom: 1rem;
+    h2 {
+      max-width: 80%;
+    }
+
+    .actions {
+      position: absolute;
+      top: -7%;
+      right: 0;
+      button {
+        border-radius: 25px;
+        width: 35px;
+        height: 35px;
+        padding: 0;
+        margin-left: 0.5rem;
+        i {
+          font-size: 0.8rem;
+        }
+      }
+    }
+  }
+}
+//

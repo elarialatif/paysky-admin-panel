@@ -12,10 +12,19 @@ export class AuthService {
   login(username: string, password: string): boolean {
     if (username === 'admin' && password === 'admin') {
       this.isAuthenticated = true;
-      this.router.navigate(['/']);
+      localStorage.setItem('username', username);
+      localStorage.setItem('password', password);
+      this.router.navigate(['/products']);
       return true;
     }
     return false;
+  }
+
+  isLoggedIn(): boolean {
+    const username = localStorage.getItem('username');
+    const password = localStorage.getItem('password');
+    this.isAuthenticated = username === 'admin' && password === 'admin';
+    return this.isAuthenticated;
   }
 
   logout(): void {
@@ -23,7 +32,5 @@ export class AuthService {
     this.router.navigate(['/login']);
   }
 
-  isLoggedIn(): boolean {
-    return this.isAuthenticated;
-  }
+
 }

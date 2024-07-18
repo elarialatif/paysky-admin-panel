@@ -4,7 +4,6 @@ import { Observable, of } from 'rxjs'; // Add this import
 import { ProductsState } from '../../../../core/store/reducers/product.reducer';
 import * as ProductsActions from '../../../../core/store/actions/product.actions';
 import { ProductsService } from '../../../../core/services/product.service';
-import { Product } from '../../../../core/store/models/product.model'; // Add this import
 
 @Component({
   selector: 'app-products-list',
@@ -13,16 +12,24 @@ import { Product } from '../../../../core/store/models/product.model'; // Add th
 })
 export class ProductsListComponent implements OnInit {
   products$: Observable<any[]>;
+  loading: boolean = true;
+  error: string = '';
 
   constructor(private store: Store<ProductsState>, private productsService: ProductsService) {
     this.products$ = this.store.select(state => state.products);
   }
 
   ngOnInit(): void {
-    this.productsService.getProducts().subscribe((products: Product[]) => {
-
-      this.products$ = of(products);
-
+    this.productsService.getProducts().subscribe({
+      next: (products) => {
+        this.products$ = of(products);
+        this.loading = false;
+      },
+      error: (err) => {
+        this.error = 'Failed to load products';
+        this.loading = false;
+        console.error(err);
+      }
     });
   }
 
