@@ -13,6 +13,6 @@ export const updateProduct = createAction('[Products] Update Product', props<{ p
 export const updateProductSuccess = createAction('[Products] Update Product Success', props<{ product: Product }>());
 export const updateProductFailure = createAction('[Products] Update Product Failure', props<{ error: any }>());
 
-export const deleteProduct = createAction('[Products] Delete Product', props<{ id: number }>());
-export const deleteProductSuccess = createAction('[Products] Delete Product Success', props<{ id: number }>());
+export const deleteProduct = createAction('[Products] Delete Product', props<{ id: string  }>());
+export const deleteProductSuccess = createAction('[Products] Delete Product Success', props<{ id: string  }>());
 export const deleteProductFailure = createAction('[Products] Delete Product Failure', props<{ error: any }>());

@@ -13,7 +13,7 @@ import * as ProductsActions from '../../../../core/store/actions/product.actions
 export class ProductFormComponent implements OnInit {
   productForm: FormGroup;
   isEdit = false;
-  productId: number | null = null;
+  productId: any;
 
   constructor(
     private fb: FormBuilder,

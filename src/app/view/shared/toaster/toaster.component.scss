@@ -1,0 +1,14 @@
+.toaster {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  color: #fff;
+  &.success { background-color: rgb(84, 146, 84); }
+  &.error { background-color: red; }
+  &.info { background-color: blue; }
+  &.warning { background-color: orange; }
+}
+
+
