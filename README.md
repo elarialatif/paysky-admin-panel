@@ -23,7 +23,7 @@ This project is a responsive admin panel for managing products and users. It inc
    ```bash
    git clone <git@github.com:elarialatif/paysky-admin-panel.git>
    cd paysky-admin-panel
-   
+
 2. Install dependencies:
   ```bash
   npm install
@@ -34,10 +34,12 @@ This project is a responsive admin panel for managing products and users. It inc
 
 4. Open your browser and navigate to http://localhost:4200.
 
+
 ### API Endpoints
 
-[https://fakestoreapi.com/docs](https://fakestoreapi.com/docs)
+[https://fakestoreapi.com/docs]
 
 
 ### Final Notes
-The "FakeStore API" does not include "categories management," so I used "users management" instead.
+<span style="color: green;">- The "FakeStore API" does not include "categories management," so I used "users management" instead.
+</span>
