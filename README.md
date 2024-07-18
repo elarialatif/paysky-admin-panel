@@ -40,6 +40,7 @@ This project is a responsive admin panel for managing products and users. It inc
 [https://fakestoreapi.com/docs]
 
 
-### Final Notes
-<span style="color: green;">- The "FakeStore API" does not include "categories management," so I used "users management" instead.
-</span>
+## Final Notes
+The "**FakeStore API**" does not include "categories management," so I used "users management" instead.
+
+
