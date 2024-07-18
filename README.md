@@ -1,27 +1,40 @@
-# PayskyAdminPanel
+# Admin Panel
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.0.
+## Description
+This project is a responsive admin panel for managing products and users. It includes authentication, API integration, and uses Angular, Tailwind CSS, NgRx, and Angular Material.
 
-## Development server
+## Features
+- Admin login
+- State management with NgRx
+- Product management (view, add, edit, delete)
+- User management (view, add, edit, delete)
+- Toaster notifications for user actions
+- API integration with FakeStore API
+- Responsive design
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Setup
 
-## Code scaffolding
+### Prerequisites
+- Node.js
+- Angular CLI
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Installation
+1. Clone the repository:
+   ```bash
+   git clone <git@github.com:elarialatif/paysky-admin-panel.git>
+   cd paysky-admin-panel
+2. Clone the repository:
+  ```bash
+  npm install
+3. Run the development server:
+  ```bash
+  ng serve
+4. Open your browser and navigate to http://localhost:4200.
 
-## Build
+### API Endpoints
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+[https://fakestoreapi.com/docs](https://fakestoreapi.com/docs)
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### Final Notes
+The "FakeStore API" does not include "categories management," so I used "users management" instead.
