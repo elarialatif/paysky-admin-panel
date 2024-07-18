@@ -10,13 +10,17 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { ProductsListComponent } from './products/products-list/products-list.component';
 import { SpinnerComponent } from '../shared/spinner/spinner.component';
-import { ProductFormDialogComponent } from './products/product-form-dialog/product-form-dialog.component'
-import { ConfirmDialogComponent } from './../shared/confirm-dialog/confirm-dialog.component'
+import { ProductFormDialogComponent } from './products/product-form-dialog/product-form-dialog.component';
+import { UserFormDialogComponent } from './users/user-form-dialog/user-form-dialog.component';
+import { ConfirmDialogComponent } from './../shared/confirm-dialog/confirm-dialog.component';
+import { UsersListComponent } from './users/users-list/users-list.component';
 @NgModule({
   declarations: [
     SpinnerComponent,
     ProductsListComponent,
+    UsersListComponent,
     ProductFormDialogComponent,
+    UserFormDialogComponent,
     ConfirmDialogComponent,
   ],
   imports: [
@@ -31,7 +35,9 @@ import { ConfirmDialogComponent } from './../shared/confirm-dialog/confirm-dialo
     MatInputModule,
   ],
   exports: [
+    SpinnerComponent,
     ProductFormDialogComponent,
+    UserFormDialogComponent,
     ConfirmDialogComponent
   ]
 })

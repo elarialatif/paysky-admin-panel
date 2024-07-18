@@ -3,36 +3,36 @@ import { HttpClient } from '@angular/common/http';
 import { environment } from '../../../environments/environment';
 import { Observable, throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
-import { Category } from '../store/models/category.model';
+import { User } from '../store/models/user.model';
 
 @Injectable({
   providedIn: 'root'
 })
-export class CategoriesService {
+export class UsersService {
   private apiBaseUrl = environment.apiBaseUrl;
 
   constructor(private http: HttpClient) {}
 
-  getCategories(): Observable<Category[]> {
-    return this.http.get<Category[]>(`${this.apiBaseUrl}/products/categories`).pipe(
+  getUsers(): Observable<User[]> {
+    return this.http.get<User[]>(`${this.apiBaseUrl}/users`).pipe(
       catchError(this.handleError)
     );
   }
 
-  addCategory(category: Category): Observable<Category> {
-    return this.http.post<Category>(`${this.apiBaseUrl}/products/categories`, category).pipe(
+  addUser(user: User): Observable<User> {
+    return this.http.post<User>(`${this.apiBaseUrl}/users`, user).pipe(
       catchError(this.handleError)
     );
   }
 
-  updateCategory(category: Category): Observable<Category> {
-    return this.http.put<Category>(`${this.apiBaseUrl}/products/categories/${category.id}`, category).pipe(
+  updateUser(user: User): Observable<User> {
+    return this.http.put<User>(`${this.apiBaseUrl}/users/${user.id}`, user).pipe(
       catchError(this.handleError)
     );
   }
 
-  deleteCategory(id: number): Observable<void> {
-    return this.http.delete<void>(`${this.apiBaseUrl}/products/categories/${id}`).pipe(
+  deleteUser(id: string): Observable<void> {
+    return this.http.delete<void>(`${this.apiBaseUrl}/users/${id}`).pipe(
       catchError(this.handleError)
     );
   }
