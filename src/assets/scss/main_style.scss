@@ -24,3 +24,12 @@ mat-icon {
 .addBtn {
   background-color: #22c55e !important;
 }
+
+@media screen and (max-width: 960px) {
+  .tbl_container {
+    display: block;
+    width: 100%;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
+}

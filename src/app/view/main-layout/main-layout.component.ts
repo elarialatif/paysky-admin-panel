@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { AuthService } from '../../core/services/auth.service';
 
 @Component({
@@ -7,9 +7,32 @@ import { AuthService } from '../../core/services/auth.service';
   styleUrls: ['./main-layout.component.scss']
 })
 export class MainLayoutComponent {
-  constructor(private authService: AuthService) {}
+
+  isMenuOpen = false;
+  isSmallScreen = false;
+
+  constructor(
+    private authService: AuthService,
+  ) {
+    this.checkScreenSize();
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event:any) {
+    this.checkScreenSize();
+  }
+
+  checkScreenSize() {
+    this.isSmallScreen = window.innerWidth <= 767;
+    if (this.isSmallScreen) {
+      this.isMenuOpen = false;
+    }
+  }
 
   logout(): void {
     this.authService.logout();
+  }
+  toggleSidebar(): void {
+    this.isMenuOpen = !this.isMenuOpen;
   }
 }

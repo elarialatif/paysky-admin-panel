@@ -1,6 +1,6 @@
 <div class="flex h-screen bg-gray-200 w-full">
   <!-- Sidebar -->
-  <div class="w-64 bg-gray-800 text-white flex flex-col">
+  <div class="w-64 bg-gray-800 text-white flex flex-col sideBar" *ngIf="!isMenuOpen" [class.small-screen]="isSmallScreen">
     <div class="flex items-center justify-center h-16 bg-gray-900">
       <span class="text-2xl font-semibold">Admin Panel</span>
     </div>
@@ -15,6 +15,9 @@
     <!-- Header -->
     <header class="flex items-center justify-between h-16 px-4 bg-white shadow-md">
       <div class="flex items-center">
+        <button class="mx-2 "[class.toggleIcon]="!isMenuOpen && isSmallScreen"  (click)="toggleSidebar()">
+          <div class="hamburger-icon"></div>
+        </button>
         <span class="text-lg font-semibold">Welcome, Admin</span>
       </div>
       <button (click)="logout()" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
