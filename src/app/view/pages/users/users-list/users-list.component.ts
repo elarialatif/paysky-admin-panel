@@ -15,7 +15,7 @@ import { ConfirmDialogComponent } from './../../../shared/confirm-dialog/confirm
 @Component({
   selector: 'app-users-list',
   templateUrl: './users-list.component.html',
-  styleUrl: './users-list.component.scss'
+  styleUrls: ['./users-list.component.scss']
 })
 export class UsersListComponent implements OnInit {
   users$: Observable<User[]>;

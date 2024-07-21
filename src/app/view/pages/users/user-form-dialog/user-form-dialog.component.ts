@@ -4,7 +4,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 @Component({
   selector: 'app-user-form-dialog',
   templateUrl: './user-form-dialog.component.html',
-  styleUrl: './user-form-dialog.component.scss'
+  styleUrls: ['./user-form-dialog.component.scss']
 })
 export class UserFormDialogComponent {
   userForm: FormGroup;

@@ -5,7 +5,7 @@ import { ProductsService } from './../../../../core/services/product.service';
 @Component({
   selector: 'app-product-form-dialog',
   templateUrl: './product-form-dialog.component.html',
-  styleUrl: './product-form-dialog.component.scss'
+  styleUrls: ['./product-form-dialog.component.scss']
 })
 export class ProductFormDialogComponent implements OnInit {
   productForm: FormGroup;
